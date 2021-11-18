@@ -7,10 +7,7 @@ require('dotenv').config();
 const { REACT_APP_HAWKINS_URL,
   REACT_APP_HAWKINS_TIMEOUT,
   REACT_APP_UPSIDEDOWN_URL,
-  REACT_APP_UPSIDEDOWN_TIMEOUT,
-  DEVELOPMENT_ENVIROMENT } = process.env;
-
-const isDevelopment = DEVELOPMENT_ENVIROMENT === 'true';
+  REACT_APP_UPSIDEDOWN_TIMEOUT } = process.env;
 
 const getRealityClass = (hereIsTheUpsideDownWorld) => (
   hereIsTheUpsideDownWorld ? 'upside-down' : 'stranger-things'
@@ -123,7 +120,7 @@ class StrangerThings extends React.Component {
           hereIsTheUpsideDownWorld,
         )}` }
       >
-        { isDevelopment ? <h1>Em desenvolvimento</h1> : null }
+        <h1>Em desenvolvimento</h1>
         <div className="content strangerfy">
           <div className="change-reality">
             <button type="button" onClick={ this.changeRealityClick }>
