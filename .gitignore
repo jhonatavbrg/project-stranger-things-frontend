@@ -9,6 +9,7 @@
 
 # testing
 /coverage
+/cypress/reports
 
 # production
 /build
